@@ -6,7 +6,7 @@ const HeaderSlider = () => {
   const sliderData = [
     {
       id: 1,
-      title: "Experience Pure Sound - Your Perfect Headphones Awaits!",
+      title: "Entrusted with Your Safety, Committed to Excellence",
       offer: "Limited Time Offer 30% Off",
       buttonText1: "Buy now",
       buttonText2: "Find more",
@@ -14,7 +14,7 @@ const HeaderSlider = () => {
     },
     {
       id: 2,
-      title: "Next-Level Gaming Starts Here - Discover PlayStation 5 Today!",
+      title: "Protecting Your World, One Entry at a Time",
       offer: "Hurry up only few lefts!",
       buttonText1: "Shop Now",
       buttonText2: "Explore Deals",
@@ -22,7 +22,7 @@ const HeaderSlider = () => {
     },
     {
       id: 3,
-      title: "Power Meets Elegance - Apple MacBook Pro is Here for you!",
+      title: "Crafted for Safety, Designed for Dignity",
       offer: "Exclusive Deal 40% Off",
       buttonText1: "Order Now",
       buttonText2: "Learn More",
@@ -30,7 +30,7 @@ const HeaderSlider = () => {
     },
     {
       id: 4,
-      title: "Powee for you!",
+      title: "Your First Line of Defense, Your Peace of Mind",
       offer: "Exclusive Deal 40% Off",
       buttonText1: "Order Now",
       buttonText2: "Learn More",
@@ -38,7 +38,7 @@ const HeaderSlider = () => {
     },
     {
       id: 5,
-      title: "Power Meets Elegance - Apple MacBook Pro is Here for you!",
+      title: "Where Protection Meets Prestige.",
       offer: "Exclusive Deal 40% Off",
       buttonText1: "Order Now",
       buttonText2: "Learn More",
