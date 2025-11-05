@@ -5,28 +5,37 @@ import Image from "next/image";
 const products = [
   {
     id: 1,
-    image: assets.C12,
-    // title: "Unparalleled Sound",
-    description: "Experience",
+    image: assets.l8,
+    
+  },
+  
+  {
+    id: 4,
+    image: assets.l1,
+    // title: "adeftg",
+    // description: "Shop",
   },
   {
-    id: 2,
-    image: assets.C14,
-    // title: "Stay C",
-    description: "a",
+    id: 5,
+    image: assets.l3,
+    
+  },
+  {
+    id: 6,
+    image: assets.l2,
+    
   },
   {
     id: 3,
-    image: assets.C15,
-    title: "adeftg",
-    description: "Shop",
+    image: assets.l10,
+   
   },
-  // {
-  //   id: 4,
-  //   image: assets.C24,
-  //   title: "doors",
-  //   description: "Shop the latest doors in ghana and beyond",
-  // },
+  {
+    id: 2,
+    image: assets.l9,
+   
+  },
+  
 ];
 
 const FeaturedProduct = () => {

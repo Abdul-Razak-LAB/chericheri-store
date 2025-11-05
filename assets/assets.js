@@ -20,32 +20,8 @@ import heart_icon from "./heart_icon.svg";
 import star_icon from "./star_icon.svg";
 import redirect_icon from "./redirect_icon.svg";
 import star_dull_icon from "./star_dull_icon.svg";
-// import header_headphone_image from "./header_headphone_image.png";
-// import header_playstation_image from "./header_playstation_image.png";
-// import header_macbook_image from "./header_macbook_image.png";
-// import macbook_image from "./macbook_image.png";
-// import bose_headphone_image from "./bose_headphone_image.png";
-// import apple_earphone_image from "./apple_earphone_image.png";
-// import samsung_s23phone_image from "./samsung_s23phone_image.png";
-// import venu_watch_image from "./venu_watch_image.png";
 import upload_area from "./upload_area.png";
-// import cannon_camera_image from "./cannon_camera_image.png";
-// import sony_airbuds_image from "./sony_airbuds_image.png";
-// import asus_laptop_image from "./asus_laptop_image.png";
-// import projector_image from "./projector_image.png";
-// import playstation_image from "./playstation_image.png";
-// import girl_with_headphone_image from "./girl_with_headphone_image.png";
-// import girl_with_earphone_image from "./girl_with_earphone_image.png";
-// import md_controller_image from "./md_controller_image.png";
-// import sm_controller_image from "./sm_controller_image.png";
-// import jbl_soundbox_image from "./jbl_soundbox_image.png";
-// import boy_with_laptop_image from "./boy_with_laptop_image.png";
 import checkmark from "./checkmark.png";
-// import product_details_page_apple_earphone_image1 from "./product_details_page_apple_earphone_image1.png";
-// import product_details_page_apple_earphone_image2 from "./product_details_page_apple_earphone_image2.png";
-// import product_details_page_apple_earphone_image3 from "./product_details_page_apple_earphone_image3.png";
-// import product_details_page_apple_earphone_image4 from "./product_details_page_apple_earphone_image4.png";
-// import product_details_page_apple_earphone_image5 from "./product_details_page_apple_earphone_image5.png";
 import c181 from "./c181.png";
 import aa3 from "./aa3.jpg";
 import aa4 from "./aa4.jpg";
@@ -83,8 +59,17 @@ import C29 from "./C29.jpg";
 import X12A from "./X12A.jpg";
 import X5 from "./X5.jpg";
 import X161 from "./X161.jpg";
-// import C3X from "./C3X.jpg";
-
+import mm1 from "./mm1.jpg";
+import mma from "./mma.jpg";
+import mm2 from "./mm2.jpg";
+import mm3 from "./mm3.jpg";
+import mm4 from "./mm4.jpg";
+import l1 from "./l1.jpg";
+import l2 from "./l2.jpg";
+import l3 from "./l3.jpg";
+import l8 from "./l8.jpg";
+import l9 from "./l9.jpg";
+import l10 from "./l10.jpg";
 
 export const assets = {
   logo,
@@ -123,7 +108,17 @@ export const assets = {
   C27,
   C28,
   C29,
-  // C3X,
+  mm1,
+  mm2,
+  mma,
+  mm3,
+  mm4,
+  l1,
+  l2,
+  l3,
+  l10,
+  l8,
+  l9,
   
   search_icon,
   user_icon,
@@ -146,31 +141,7 @@ export const assets = {
   star_icon,
   redirect_icon,
   star_dull_icon,
-  // header_headphone_image,
-  // header_playstation_image,
-  // header_macbook_image,
-  // macbook_image,
-  // bose_headphone_image,
-  // apple_earphone_image,
-  // samsung_s23phone_image,
-  // venu_watch_image,
   upload_area,
-  // cannon_camera_image,
-  // sony_airbuds_image,
-  // asus_laptop_image,
-  // projector_image,
-  // playstation_image,
-  // girl_with_headphone_image,
-  // girl_with_earphone_image,
-  // md_controller_image,
-  // sm_controller_image,
-  // jbl_soundbox_image,
-  // boy_with_laptop_image,
-  // product_details_page_apple_earphone_image1,
-  // product_details_page_apple_earphone_image2,
-  // product_details_page_apple_earphone_image3,
-  // product_details_page_apple_earphone_image4,
-  // product_details_page_apple_earphone_image5,
   c181,
   aa3,
   checkmark
@@ -214,16 +185,11 @@ export const productsDummyData = [
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
     "name": "Security door",
     "description": "Your home, your fortress: protected by our top-grade security doors.",
-    // "price": 499.99,
-    // "offerPrice": 399.99,
+    
     "image": [
-      C1
-      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/k4dafzhwhgcn5tnoylrw.webp",
-      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/j212frakb8hdrhvhajhg.webp",
-      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/imwuugqxsajuwqpkegb5.webp",
-      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/k1oqaslw5tb3ebw01vvj.webp"
+      C1,
     ],
-    "category": "Earphone",
+    "category": "Security Door",
     "date": 1738667236865,
     "__v": 0
   },
@@ -235,10 +201,10 @@ export const productsDummyData = [
     // "price": 429.99,
     // "offerPrice": 329.99,
     "image": [
-      C2
+      C2,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/m16coelz8ivkk9f0nwrz.webp"
     ],
-    "category": "Headphone",
+    "category": "Special Door",
     "date": 1738667310300,
     "__v": 0
   },
@@ -250,10 +216,10 @@ export const productsDummyData = [
     // "price": 899.99,
     // "offerPrice": 799.99,
     "image": [
-      C3
+      C3,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/xjd4eprpwqs7odbera1w.webp"
     ],
-    "category": "Smartphone",
+    "category": "Luxury Doot",
     "date": 1738667366224,
     "__v": 0
   },
@@ -265,10 +231,10 @@ export const productsDummyData = [
     // "price": 399.99,
     // "offerPrice": 349.99,
     "image": [
-      C4
+      C4,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/hdfi4u3fmprazpnrnaga.webp"
     ],
-    "category": "Earphone",
+    "category": "Security Door",
     "date": 1738667417511,
     "__v": 0
   },
@@ -280,10 +246,10 @@ export const productsDummyData = [
     // "price": 599.99,
     // "offerPrice": 499.99,
     "image": [
-      C5
+      C5,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/dd3l13vfoartrgbvkkh5.webp"
     ],
-    "category": "Accessories",
+    "category": "Special Door",
     "date": 1738667503075,
     "__v": 0
   },
@@ -298,7 +264,7 @@ export const productsDummyData = [
       C6,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/r5h370zuujvrw461c6wy.webp"
     ],
-    "category": "Camera",
+    "category": "Luxury Door",
     "date": 1738667788883,
     "__v": 0
   },
@@ -310,10 +276,10 @@ export const productsDummyData = [
     // "price": 2799.99,
     // "offerPrice": 2499.99,
     "image": [
-      C7
+      C7,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/rzri7kytphxalrm9rubd.webp"
     ],
-    "category": "Laptop",
+    "category": "Security door",
     "date": 1738667977644,
     "__v": 0
   },
@@ -325,10 +291,10 @@ export const productsDummyData = [
     // "price": 349.99,
     // "offerPrice": 299.99,
     "image": [
-      C8
+      C8,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/e3zjaupyumdkladmytke.webp"
     ],
-    "category": "Earphone",
+    "category": "Special Door",
     "date": 1738668086331,
     "__v": 0
   },
@@ -340,10 +306,10 @@ export const productsDummyData = [
     // "price": 1699.99,
     // "offerPrice": 1499.99,
     "image": [
-      C9
+      C9,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/qqdcly8a8vkyciy9g0bw.webp"
     ],
-    "category": "Accessories",
+    "category": "Luxuary Door",
     "date": 1738668126660,
     "__v": 0
   },
@@ -355,10 +321,10 @@ export const productsDummyData = [
     // "price": 1699.99,
     // "offerPrice": 1499.99,
     "image": [
-      X12A
+      X12A,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/qqdcly8a8vkyciy9g0bw.webp"
     ],
-    "category": "Accessories",
+    "category": "Luxuary Door",
     "date": 1738668126660,
     "__v": 0
   },
@@ -370,10 +336,10 @@ export const productsDummyData = [
     // "price": 1699.99,
     // "offerPrice": 1499.99,
     "image": [
-      X5
+      X5,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/qqdcly8a8vkyciy9g0bw.webp"
     ],
-    "category": "Accessories",
+    "category": "Luxuary Door",
     "date": 1738668126660,
     "__v": 0
   },
@@ -385,10 +351,10 @@ export const productsDummyData = [
     // "price": 1699.99,
     // "offerPrice": 1499.99,
     "image": [
-      X161
+      X161,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/qqdcly8a8vkyciy9g0bw.webp"
     ],
-    "category": "Accessories",
+    "category": "Luxuary Door",
     "date": 1738668126660,
     "__v": 0
   },
@@ -400,13 +366,228 @@ export const productsDummyData = [
     // "price": 2199.99,
     // "offerPrice": 1999.99,
     "image": [
-      C10
+      C10,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
     ],
     "category": "Laptop",
     "date": 1738668619198,
     "__v": 0
-  }
+  },
+  {
+    "_id": "67a1fa4b3f34a77b6dde9166",
+    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
+    "name": "Security door",
+    "description": "Your First Line of Defense, Your Peace of Mind",
+    // "price": 2199.99,
+    // "offerPrice": 1999.99,
+    "image": [
+      C15,
+      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
+    ],
+    "category": "Laptop",
+    "date": 1738668619198,
+    "__v": 0
+  },
+  {
+    "_id": "67a1fa4b3f34a77b6dde9166",
+    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
+    "name": "Security door",
+    "description": "Your First Line of Defense, Your Peace of Mind",
+    // "price": 2199.99,
+    // "offerPrice": 1999.99,
+    "image": [
+      C27,
+      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
+    ],
+    "category": "Laptop",
+    "date": 1738668619198,
+    "__v": 0
+  },
+  {
+    "_id": "67a1fa4b3f34a77b6dde9166",
+    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
+    "name": "Security door",
+    "description": "Your First Line of Defense, Your Peace of Mind",
+    // "price": 2199.99,
+    // "offerPrice": 1999.99,
+    "image": [
+      C26,
+      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
+    ],
+    "category": "Laptop",
+    "date": 1738668619198,
+    "__v": 0
+  },
+  {
+    "_id": "67a1fa4b3f34a77b6dde9166",
+    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
+    "name": "Security door",
+    "description": "Your First Line of Defense, Your Peace of Mind",
+    // "price": 2199.99,
+    // "offerPrice": 1999.99,
+    "image": [
+      C13,
+      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
+    ],
+    "category": "Laptop",
+    "date": 1738668619198,
+    "__v": 0
+  },
+  {
+    "_id": "67a1fa4b3f34a77b6dde9166",
+    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
+    "name": "Security door",
+    "description": "Your First Line of Defense, Your Peace of Mind",
+    // "price": 2199.99,
+    // "offerPrice": 1999.99,
+    "image": [
+      C21,
+      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
+    ],
+    "category": "Laptop",
+    "date": 1738668619198,
+    "__v": 0
+  },
+  {
+    "_id": "67a1fa4b3f34a77b6dde9166",
+    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
+    "name": "Security door",
+    "description": "Your First Line of Defense, Your Peace of Mind",
+    // "price": 2199.99,
+    // "offerPrice": 1999.99,
+    "image": [
+      C22,
+      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
+    ],
+    "category": "Laptop",
+    "date": 1738668619198,
+    "__v": 0
+  },
+  {
+    "_id": "67a1fa4b3f34a77b6dde9166",
+    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
+    "name": "Security door",
+    "description": "Your First Line of Defense, Your Peace of Mind",
+    // "price": 2199.99,
+    // "offerPrice": 1999.99,
+    "image": [
+      C17,
+      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
+    ],
+    "category": "Laptop",
+    "date": 1738668619198,
+    "__v": 0
+  },
+  {
+    "_id": "67a1fa4b3f34a77b6dde9166",
+    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
+    "name": "Security door",
+    "description": "Your First Line of Defense, Your Peace of Mind",
+    // "price": 2199.99,
+    // "offerPrice": 1999.99,
+    "image": [
+      C12,
+      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
+    ],
+    "category": "Laptop",
+    "date": 1738668619198,
+    "__v": 0
+  },
+  {
+    "_id": "67a1fa4b3f34a77b6dde9166",
+    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
+    "name": "Security door",
+    "description": "Your First Line of Defense, Your Peace of Mind",
+    // "price": 2199.99,
+    // "offerPrice": 1999.99,
+    "image": [
+      C14,
+      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
+    ],
+    "category": "Laptop",
+    "date": 1738668619198,
+    "__v": 0
+  },
+  {
+    "_id": "67a1fa4b3f34a77b6dde9166",
+    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
+    "name": "Security door",
+    "description": "Your First Line of Defense, Your Peace of Mind",
+    // "price": 2199.99,
+    // "offerPrice": 1999.99,
+    "image": [
+      mm4,
+      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
+    ],
+    "category": "Laptop",
+    "date": 1738668619198,
+    "__v": 0
+  },
+  {
+    "_id": "67a1fa4b3f34a77b6dde9166",
+    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
+    "name": "Security door",
+    "description": "Your First Line of Defense, Your Peace of Mind",
+    // "price": 2199.99,
+    // "offerPrice": 1999.99,
+    "image": [
+      mm3,
+      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
+    ],
+    "category": "Laptop",
+    "date": 1738668619198,
+    "__v": 0
+  },
+  {
+    "_id": "67a1fa4b3f34a77b6dde9166",
+    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
+    "name": "Security door",
+    "description": "Your First Line of Defense, Your Peace of Mind",
+    // "price": 2199.99,
+    // "offerPrice": 1999.99,
+    "image": [
+      mm2,
+      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
+    ],
+    "category": "Laptop",
+    "date": 1738668619198,
+    "__v": 0
+  },
+  {
+    "_id": "67a1fa4b3f34a77b6dde9166",
+    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
+    "name": "Security door",
+    "description": "Your First Line of Defense, Your Peace of Mind",
+    // "price": 2199.99,
+    // "offerPrice": 1999.99,
+    "image": [
+      mm1,
+      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
+    ],
+    "category": "Laptop",
+    "date": 1738668619198,
+    "__v": 0
+  },
+  {
+    "_id": "67a1fa4b3f34a77b6dde9166",
+    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
+    "name": "Security door",
+    "description": "Your First Line of Defense, Your Peace of Mind",
+    // "price": 2199.99,
+    // "offerPrice": 1999.99,
+    "image": [
+      mma,
+      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
+    ],
+    "category": "Laptop",
+    "date": 1738668619198,
+    "__v": 0
+  },
+  
+  
+ 
+
+  
 ]
 
 export const userDummyData = {
