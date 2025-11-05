@@ -201,8 +201,7 @@ export const productsDummyData = [
     // "price": 429.99,
     // "offerPrice": 329.99,
     "image": [
-      C2,
-      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/m16coelz8ivkk9f0nwrz.webp"
+      C2
     ],
     "category": "Special Door",
     "date": 1738667310300,
@@ -216,8 +215,7 @@ export const productsDummyData = [
     // "price": 899.99,
     // "offerPrice": 799.99,
     "image": [
-      C3,
-      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/xjd4eprpwqs7odbera1w.webp"
+      C3
     ],
     "category": "Luxury Doot",
     "date": 1738667366224,
@@ -231,8 +229,7 @@ export const productsDummyData = [
     // "price": 399.99,
     // "offerPrice": 349.99,
     "image": [
-      C4,
-      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/hdfi4u3fmprazpnrnaga.webp"
+      C4
     ],
     "category": "Security Door",
     "date": 1738667417511,
@@ -246,8 +243,7 @@ export const productsDummyData = [
     // "price": 599.99,
     // "offerPrice": 499.99,
     "image": [
-      C5,
-      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/dd3l13vfoartrgbvkkh5.webp"
+      C5
     ],
     "category": "Special Door",
     "date": 1738667503075,
@@ -261,8 +257,7 @@ export const productsDummyData = [
     // "price": 4199.99,
     // "offerPrice": 3899.99,
     "image": [
-      C6,
-      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/r5h370zuujvrw461c6wy.webp"
+      C6
     ],
     "category": "Luxury Door",
     "date": 1738667788883,
@@ -276,8 +271,7 @@ export const productsDummyData = [
     // "price": 2799.99,
     // "offerPrice": 2499.99,
     "image": [
-      C7,
-      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/rzri7kytphxalrm9rubd.webp"
+      C7
     ],
     "category": "Security door",
     "date": 1738667977644,
@@ -291,8 +285,7 @@ export const productsDummyData = [
     // "price": 349.99,
     // "offerPrice": 299.99,
     "image": [
-      C8,
-      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/e3zjaupyumdkladmytke.webp"
+      C8
     ],
     "category": "Special Door",
     "date": 1738668086331,
@@ -306,8 +299,7 @@ export const productsDummyData = [
     // "price": 1699.99,
     // "offerPrice": 1499.99,
     "image": [
-      C9,
-      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/qqdcly8a8vkyciy9g0bw.webp"
+      C9
     ],
     "category": "Luxuary Door",
     "date": 1738668126660,
@@ -321,8 +313,7 @@ export const productsDummyData = [
     // "price": 1699.99,
     // "offerPrice": 1499.99,
     "image": [
-      X12A,
-      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/qqdcly8a8vkyciy9g0bw.webp"
+      X12A
     ],
     "category": "Luxuary Door",
     "date": 1738668126660,
@@ -336,8 +327,7 @@ export const productsDummyData = [
     // "price": 1699.99,
     // "offerPrice": 1499.99,
     "image": [
-      X5,
-      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/qqdcly8a8vkyciy9g0bw.webp"
+      X5
     ],
     "category": "Luxuary Door",
     "date": 1738668126660,
@@ -351,30 +341,28 @@ export const productsDummyData = [
     // "price": 1699.99,
     // "offerPrice": 1499.99,
     "image": [
-      X161,
-      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/qqdcly8a8vkyciy9g0bw.webp"
+      X161
     ],
     "category": "Luxuary Door",
     "date": 1738668126660,
     "__v": 0
   },
   {
-    "_id": "67a1fa4b3f34a77b6dde9166",
+    "_id": "ac1",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
     "name": "Security door",
     "description": "Your First Line of Defense, Your Peace of Mind",
     // "price": 2199.99,
     // "offerPrice": 1999.99,
     "image": [
-      C10,
-      // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
+      C10
     ],
-    "category": "Laptop",
+    "category": "Security door",
     "date": 1738668619198,
     "__v": 0
   },
   {
-    "_id": "67a1fa4b3f34a77b6dde9166",
+    "_id": "ac2",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
     "name": "Security door",
     "description": "Your First Line of Defense, Your Peace of Mind",
@@ -384,12 +372,12 @@ export const productsDummyData = [
       C15,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
     ],
-    "category": "Laptop",
+    "category": "Security door",
     "date": 1738668619198,
     "__v": 0
   },
   {
-    "_id": "67a1fa4b3f34a77b6dde9166",
+    "_id": "ac3",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
     "name": "Security door",
     "description": "Your First Line of Defense, Your Peace of Mind",
@@ -399,12 +387,12 @@ export const productsDummyData = [
       C27,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
     ],
-    "category": "Laptop",
+    "category": "Security door",
     "date": 1738668619198,
     "__v": 0
   },
   {
-    "_id": "67a1fa4b3f34a77b6dde9166",
+    "_id": "ac4",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
     "name": "Security door",
     "description": "Your First Line of Defense, Your Peace of Mind",
@@ -414,12 +402,12 @@ export const productsDummyData = [
       C26,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
     ],
-    "category": "Laptop",
+    "category": "Security door",
     "date": 1738668619198,
     "__v": 0
   },
   {
-    "_id": "67a1fa4b3f34a77b6dde9166",
+    "_id": "ac5",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
     "name": "Security door",
     "description": "Your First Line of Defense, Your Peace of Mind",
@@ -429,12 +417,12 @@ export const productsDummyData = [
       C13,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
     ],
-    "category": "Laptop",
+    "category": "Security door",
     "date": 1738668619198,
     "__v": 0
   },
   {
-    "_id": "67a1fa4b3f34a77b6dde9166",
+    "_id": "ac6",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
     "name": "Security door",
     "description": "Your First Line of Defense, Your Peace of Mind",
@@ -444,12 +432,12 @@ export const productsDummyData = [
       C21,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
     ],
-    "category": "Laptop",
+    "category": "Security door",
     "date": 1738668619198,
     "__v": 0
   },
   {
-    "_id": "67a1fa4b3f34a77b6dde9166",
+    "_id": "ac7",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
     "name": "Security door",
     "description": "Your First Line of Defense, Your Peace of Mind",
@@ -459,12 +447,12 @@ export const productsDummyData = [
       C22,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
     ],
-    "category": "Laptop",
+    "category": "Security door",
     "date": 1738668619198,
     "__v": 0
   },
   {
-    "_id": "67a1fa4b3f34a77b6dde9166",
+    "_id": "ac8",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
     "name": "Security door",
     "description": "Your First Line of Defense, Your Peace of Mind",
@@ -474,12 +462,12 @@ export const productsDummyData = [
       C17,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
     ],
-    "category": "Laptop",
+    "category": "Security door",
     "date": 1738668619198,
     "__v": 0
   },
   {
-    "_id": "67a1fa4b3f34a77b6dde9166",
+    "_id": "ac9",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
     "name": "Security door",
     "description": "Your First Line of Defense, Your Peace of Mind",
@@ -489,12 +477,12 @@ export const productsDummyData = [
       C12,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
     ],
-    "category": "Laptop",
+    "category": "Security door",
     "date": 1738668619198,
     "__v": 0
   },
   {
-    "_id": "67a1fa4b3f34a77b6dde9166",
+    "_id": "ac10",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
     "name": "Security door",
     "description": "Your First Line of Defense, Your Peace of Mind",
@@ -504,12 +492,12 @@ export const productsDummyData = [
       C14,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
     ],
-    "category": "Laptop",
+    "category": "Security door",
     "date": 1738668619198,
     "__v": 0
   },
   {
-    "_id": "67a1fa4b3f34a77b6dde9166",
+    "_id": "ac11",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
     "name": "Security door",
     "description": "Your First Line of Defense, Your Peace of Mind",
@@ -519,12 +507,12 @@ export const productsDummyData = [
       mm4,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
     ],
-    "category": "Laptop",
+    "category": "Security door",
     "date": 1738668619198,
     "__v": 0
   },
   {
-    "_id": "67a1fa4b3f34a77b6dde9166",
+    "_id": "ac12",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
     "name": "Security door",
     "description": "Your First Line of Defense, Your Peace of Mind",
@@ -534,12 +522,12 @@ export const productsDummyData = [
       mm3,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
     ],
-    "category": "Laptop",
+    "category": "Security door",
     "date": 1738668619198,
     "__v": 0
   },
   {
-    "_id": "67a1fa4b3f34a77b6dde9166",
+    "_id": "ac13",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
     "name": "Security door",
     "description": "Your First Line of Defense, Your Peace of Mind",
@@ -549,12 +537,12 @@ export const productsDummyData = [
       mm2,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
     ],
-    "category": "Laptop",
+    "category": "Security door",
     "date": 1738668619198,
     "__v": 0
   },
   {
-    "_id": "67a1fa4b3f34a77b6dde9166",
+    "_id": "ac14",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
     "name": "Security door",
     "description": "Your First Line of Defense, Your Peace of Mind",
@@ -564,12 +552,12 @@ export const productsDummyData = [
       mm1,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
     ],
-    "category": "Laptop",
+    "category": "Security door",
     "date": 1738668619198,
     "__v": 0
   },
   {
-    "_id": "67a1fa4b3f34a77b6dde9166",
+    "_id": "ac15",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
     "name": "Security door",
     "description": "Your First Line of Defense, Your Peace of Mind",
@@ -579,7 +567,7 @@ export const productsDummyData = [
       mma,
       // "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
     ],
-    "category": "Laptop",
+    "category": "Security door",
     "date": 1738668619198,
     "__v": 0
   },
