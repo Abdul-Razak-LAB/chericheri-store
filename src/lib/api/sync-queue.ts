@@ -274,14 +274,21 @@ export function setupSyncTriggers(farmId: string): () => void {
  * Request background sync (best-effort, iOS may not support)
  */
 export async function requestBackgroundSync(): Promise<boolean> {
-  if (!('serviceWorker' in navigator) || !('sync' in ServiceWorkerRegistration.prototype)) {
+  if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
+    console.warn('[Sync Queue] Service Worker not available');
+    return false;
+  }
+
+  // Check if sync is supported (use type assertion as it's experimental)
+  const swRegistration = ServiceWorkerRegistration.prototype as any;
+  if (!('sync' in swRegistration)) {
     console.warn('[Sync Queue] Background Sync not supported');
     return false;
   }
 
   try {
     const registration = await navigator.serviceWorker.ready;
-    await registration.sync.register('sync-outbox');
+    await (registration as any).sync.register('sync-outbox');
     console.log('[Sync Queue] Background sync registered');
     return true;
   } catch (error) {

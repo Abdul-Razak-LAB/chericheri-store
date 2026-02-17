@@ -20,18 +20,21 @@ export interface LocalTask {
   title: string;
   description?: string;
   assignedTo?: string;
-  dueDate?: number;
+  dueDate?: string;
   status: 'pending' | 'in_progress' | 'completed' | 'overdue';
+  priority?: 'low' | 'medium' | 'high' | 'urgent';
   proofOfWork?: {
-    photos?: string[];
-    videos?: string[];
-    audio?: string[];
+    photos?: Array<{ id: string; url: string; }>;
+    videos?: Array<{ id: string; url: string; }>;
+    audio?: Array<{ id: string; url: string; }>;
+    notes?: string;
     gps?: { lat: number; lng: number };
-    timestamp: number;
+    timestamp: string;
   };
   syncStatus: 'local' | 'synced' | 'pending';
   createdAt: number;
   updatedAt: number;
+  completedAt?: string;
 }
 
 export interface LocalMedia {
@@ -355,16 +358,23 @@ export async function markEventSynced(id: string): Promise<void> {
 export async function clearFarmData(farmId: string): Promise<void> {
   const db = await getDB();
   
-  const stores: Array<keyof FarmOpsDB> = [
-    'outbox_jobs',
-    'local_tasks',
-    'local_media',
-    'sync_meta',
-    'local_events',
-  ];
+  // Clear outbox_jobs
+  const outboxKeys = await db.getAllKeysFromIndex('outbox_jobs', 'by-farmId', farmId);
+  await Promise.all(outboxKeys.map(key => db.delete('outbox_jobs', key)));
   
-  for (const storeName of stores) {
-    const allKeys = await db.getAllKeysFromIndex(storeName as any, 'by-farmId', farmId);
-    await Promise.all(allKeys.map(key => db.delete(storeName as any, key)));
-  }
+  // Clear local_tasks
+  const taskKeys = await db.getAllKeysFromIndex('local_tasks', 'by-farmId', farmId);
+  await Promise.all(taskKeys.map(key => db.delete('local_tasks', key)));
+  
+  // Clear local_media
+  const mediaKeys = await db.getAllKeysFromIndex('local_media', 'by-farmId', farmId);
+  await Promise.all(mediaKeys.map(key => db.delete('local_media', key)));
+  
+  // Clear sync_meta
+  const syncKeys = await db.getAllKeysFromIndex('sync_meta', 'by-farmId', farmId);
+  await Promise.all(syncKeys.map(key => db.delete('sync_meta', key)));
+  
+  // Clear local_events
+  const eventKeys = await db.getAllKeysFromIndex('local_events', 'by-farmId', farmId);
+  await Promise.all(eventKeys.map(key => db.delete('local_events', key)));
 }

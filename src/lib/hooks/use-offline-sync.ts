@@ -57,6 +57,9 @@ export function useOfflineSync() {
    * Setup online/offline listeners
    */
   useEffect(() => {
+    // Only run in browser
+    if (typeof window === 'undefined') return;
+
     const handleOnline = () => {
       setOnlineStatus(true);
       console.log('[Offline Sync] Back online');
@@ -112,48 +115,50 @@ export function useOfflineSync() {
  */
 export function useServiceWorker() {
   useEffect(() => {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker
-        .register('/sw.js')
-        .then((registration) => {
-          console.log('[SW] Service Worker registered:', registration);
-
-          // Check for updates periodically
-          setInterval(() => {
-            registration.update();
-          }, 60000); // Check every minute
-
-          // Listen for new service worker
-          registration.addEventListener('updatefound', () => {
-            const newWorker = registration.installing;
-            if (!newWorker) return;
-
-            newWorker.addEventListener('statechange', () => {
-              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                // New service worker available
-                console.log('[SW] New version available');
-                
-                // Notify user about update
-                if (confirm('A new version is available. Reload to update?')) {
-                  newWorker.postMessage({ type: 'SKIP_WAITING' });
-                  window.location.reload();
-                }
-              }
-            });
-          });
-        })
-        .catch((error) => {
-          console.error('[SW] Service Worker registration failed:', error);
-        });
-
-      // Listen for controller change (new service worker activated)
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
-        console.log('[SW] New service worker activated');
-        window.location.reload();
-      });
-    } else {
-      console.warn('[SW] Service Workers not supported');
+    // Only run in browser
+    if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
+      console.warn('[SW] Service Workers not supported or running on server');
+      return;
     }
+
+    navigator.serviceWorker
+      .register('/sw.js')
+      .then((registration) => {
+        console.log('[SW] Service Worker registered:', registration);
+
+        // Check for updates periodically
+        setInterval(() => {
+          registration.update();
+        }, 60000); // Check every minute
+
+        // Listen for new service worker
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          if (!newWorker) return;
+
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              // New service worker available
+              console.log('[SW] New version available');
+              
+              // Notify user about update
+              if (confirm('A new version is available. Reload to update?')) {
+                newWorker.postMessage({ type: 'SKIP_WAITING' });
+                window.location.reload();
+              }
+            }
+          });
+        });
+      })
+      .catch((error) => {
+        console.error('[SW] Service Worker registration failed:', error);
+      });
+
+    // Listen for controller change (new service worker activated)
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      console.log('[SW] New service worker activated');
+      window.location.reload();
+    });
   }, []);
 }
 
