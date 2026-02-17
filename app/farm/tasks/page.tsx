@@ -27,11 +27,13 @@ export default function TasksPage() {
 
   const tasksByStatus = {
     today: filteredTasks.filter((t) => {
+      if (!t.dueDate) return false;
       const dueDate = new Date(t.dueDate);
       const today = new Date();
       return dueDate.toDateString() === today.toDateString() && t.status !== 'completed';
     }),
     overdue: filteredTasks.filter((t) => {
+      if (!t.dueDate) return false;
       const dueDate = new Date(t.dueDate);
       return dueDate < new Date() && t.status !== 'completed';
     }),
