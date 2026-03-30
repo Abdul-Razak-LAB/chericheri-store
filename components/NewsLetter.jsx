@@ -2,25 +2,28 @@ import React from "react";
 
 const NewsLetter = () => {
   return (
-    <div className="flex flex-col items-center justify-center text-center space-y-2 pt-8 pb-14">
-      <h1 className="md:text-4xl text-2xl font-medium">
-        Subscribe now & get 20% off
-      </h1>
-      <p className="md:text-base text-gray-500/80 pb-8">
-       Get the best Turkish doors in Ghana. Our doors are made with high-quality materials, designed to 
-       provide maximum security and style.
-      </p>
-      <div className="flex items-center justify-between max-w-2xl w-full md:h-14 h-12">
-        <input
-          className="border border-gray-500/30 rounded-md h-full border-r-0 outline-none w-full rounded-r-none px-3 text-gray-500"
-          type="text"
-          placeholder="Enter your email id"
-        />
-        <button className="md:px-12 px-8 h-full text-white bg-orange-600 rounded-md rounded-l-none">
-          Subscribe
-        </button>
+    <section className="section-wrap pb-14">
+      <div className="soft-card px-6 md:px-10 py-10 md:py-12 flex flex-col items-center justify-center text-center">
+        <p className="section-eyebrow">Stay updated</p>
+        <h2 className="md:text-4xl text-3xl font-medium mt-2 text-balance">
+          Subscribe and get early access to special drops
+        </h2>
+        <p className="md:text-base text-gray-600 max-w-2xl pt-4 pb-8">
+          Be first to know when new Turkish door collections, hardware bundles, and installation offers go live.
+        </p>
+
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 max-w-2xl w-full">
+          <input
+            className="border border-gray-300 rounded-full h-12 outline-none w-full px-5 text-gray-700 bg-white/85"
+            type="text"
+            placeholder="Enter your email address"
+          />
+          <button className="btn-primary h-12 px-8 w-full sm:w-auto">
+            Subscribe
+          </button>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

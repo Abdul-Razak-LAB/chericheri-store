@@ -6,13 +6,14 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint app components context config lib models middleware.ts --ext .js,.jsx,.ts,.tsx,.mjs"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.32.2",
     "inngest": "^3.42.1",
     "mongoose": "^8.18.2",
     "next": "15.5.9",
+    "nodemailer": "^8.0.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hot-toast": "^2.5.1"

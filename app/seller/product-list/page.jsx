@@ -6,15 +6,37 @@ import { useAppContext } from "@/context/AppContext";
 import Footer from "@/components/seller/Footer";
 import Loading from "@/components/Loading";
 
+const GARAGE_DOOR_MODEL_NUMBERS = new Set([10, 11, 12, 23, 24, 25, 26, 27]);
+
+const normalizeCatalogProducts = (items = []) => {
+  return items.map((product, index) => {
+    const modelNumber = index + 1;
+
+    if (GARAGE_DOOR_MODEL_NUMBERS.has(modelNumber)) {
+      return {
+        ...product,
+        name: "Garage Door",
+        category: "Garage Door",
+      };
+    }
+
+    return {
+      ...product,
+      name: `Door Model ${modelNumber}`,
+      category: "Door",
+    };
+  });
+};
+
 const ProductList = () => {
 
-  const { router } = useAppContext()
+  const { router, formatAmount } = useAppContext()
 
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
 
   const fetchSellerProduct = async () => {
-    setProducts(productsDummyData)
+    setProducts(normalizeCatalogProducts(productsDummyData))
     setLoading(false)
   }
 
@@ -56,7 +78,7 @@ const ProductList = () => {
                     </span>
                   </td>
                   <td className="px-4 py-3 max-sm:hidden">{product.category}</td>
-                  <td className="px-4 py-3">${product.offerPrice}</td>
+                  <td className="px-4 py-3">{formatAmount(product.offerPrice)}</td>
                   <td className="px-4 py-3 max-sm:hidden">
                     <button onClick={() => router.push(`/product/${product._id}`)} className="flex items-center gap-1 px-1.5 md:px-3.5 py-2 bg-orange-600 text-white rounded-md">
                       <span className="hidden md:block">Visit</span>

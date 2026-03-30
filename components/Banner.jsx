@@ -4,35 +4,42 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between md:pl-20 py-14 md:py-0 bg-[#E6E9F2] my-16 rounded-xl overflow-hidden">
+    <section className="section-wrap">
+      <div className="relative flex flex-col md:flex-row items-center justify-between md:pl-16 py-12 md:py-0 soft-card overflow-hidden">
+      <div className="absolute -left-8 top-8 h-40 w-40 rounded-full bg-[#d8b074]/25 blur-2xl" />
       <Image
-        className="max-w-56"
+        className="max-w-56 z-10"
         src={assets.mm4}
         alt="jbl_soundbox_image"
       />
-      <div className="flex flex-col items-center justify-center text-center space-y-2 px-4 md:px-0">
-        <h2 className="text-2xl md:text-3xl font-semibold max-w-[290px]">
-          Level Up Your Security 
+      <div className="flex flex-col items-center justify-center text-center space-y-3 px-4 md:px-0 py-4 z-10">
+        <p className="section-eyebrow">Exclusive this week</p>
+        <h2 className="text-3xl md:text-4xl font-semibold max-w-[500px] text-balance">
+          Level up your security with premium Turkish doors
         </h2>
-        <p className="max-w-[343px] font-medium text-gray-800/60">
-          Whare Protection meets Prestige
+        <p className="max-w-[420px] font-medium text-gray-700/80">
+          Where protection meets prestige. Upgrade your entry with high-quality designs built to last.
         </p>
-        <button className="group flex items-center justify-center gap-1 px-12 py-2.5 bg-orange-600 rounded text-white">
+
+        <button className="group btn-primary">
           Buy now
           <Image className="group-hover:translate-x-1 transition" src={assets.arrow_icon_white} alt="arrow_icon_white" />
         </button>
       </div>
+
       <Image
-        className="hidden md:block max-w-80"
+        className="hidden md:block max-w-80 z-10"
         src={assets.mm4}
         alt="md_controller_image"
       />
       <Image
-        className="md:hidden"
+        className="md:hidden z-10"
         src={assets.mm4}
         alt="sm_controller_image"
       />
-    </div>
+
+      </div>
+    </section>
   );
 };
 

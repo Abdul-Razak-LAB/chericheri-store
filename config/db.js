@@ -2,6 +2,27 @@ import mongoose from "mongoose";
 
 let cached = global.mongoose
 
+const sanitizeMongoUri = (uri) => {
+    return String(uri || "")
+        .trim()
+        .replace(/^['"]|['"]$/g, "")
+}
+
+const buildMongoUri = () => {
+    const baseUri = sanitizeMongoUri(process.env.MONGODB_URI)
+
+    if (!baseUri) {
+        throw new Error("MONGODB_URI is not set or is invalid.")
+    }
+
+    // If a DB name is already present in URI path, use it directly.
+    if (/^mongodb(\+srv)?:\/\/[^/]+\/[^?]+/.test(baseUri)) {
+        return baseUri
+    }
+
+    return `${baseUri.replace(/\/$/, "")}/chericheristore`
+}
+
 if (!cached) {
     cached = global.mongoose = { conn: null, Promise: null }
 }
@@ -17,7 +38,9 @@ async function connectDB() {
             BufferCommands: false
         }
 
-        cached.Promise = mongoose.connect(`${process.env.MONGODB_URI}/chericheristore`,opts).then( mongoose => {
+        const mongoUri = buildMongoUri()
+
+        cached.Promise = mongoose.connect(mongoUri, opts).then( mongoose => {
             return mongoose
         })
     }

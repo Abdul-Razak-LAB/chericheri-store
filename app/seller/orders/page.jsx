@@ -6,15 +6,41 @@ import { useAppContext } from "@/context/AppContext";
 import Footer from "@/components/seller/Footer";
 import Loading from "@/components/Loading";
 
+const PRODUCT_GROUPS = [
+    "Doors",
+    "Garage Door",
+    "Lockers",
+    "Handles",
+    "Home Appliances",
+    "Kitchen Cabinets",
+];
+
+const normalizeOrderProducts = (orders = []) => {
+    return orders.map((order, orderIndex) => ({
+        ...order,
+        items: order.items.map((item, itemIndex) => {
+            const group = PRODUCT_GROUPS[(orderIndex + itemIndex) % PRODUCT_GROUPS.length];
+            return {
+                ...item,
+                product: {
+                    ...item.product,
+                    name: `${group} Model ${orderIndex + itemIndex + 1}`,
+                    category: group,
+                },
+            };
+        }),
+    }));
+};
+
 const Orders = () => {
 
-    const { currency } = useAppContext();
+    const { formatAmount } = useAppContext();
 
     const [orders, setOrders] = useState([]);
     const [loading, setLoading] = useState(true);
 
     const fetchSellerOrders = async () => {
-        setOrders(orderDummyData);
+        setOrders(normalizeOrderProducts(orderDummyData));
         setLoading(false);
     }
 
@@ -53,7 +79,7 @@ const Orders = () => {
                                     <span>{order.address.phoneNumber}</span>
                                 </p>
                             </div>
-                            <p className="font-medium my-auto">{currency}{order.amount}</p>
+                            <p className="font-medium my-auto">{formatAmount(order.amount)}</p>
                             <div>
                                 <p className="flex flex-col">
                                     <span>Method : COD</span>

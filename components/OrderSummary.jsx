@@ -1,31 +1,50 @@
-import { addressDummyData } from "@/assets/assets";
 import { useAppContext } from "@/context/AppContext";
 import React, { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 const OrderSummary = () => {
 
-  const { currency, router, getCartCount, getCartAmount } = useAppContext()
-  const [selectedAddress, setSelectedAddress] = useState(null);
+  const {
+    router,
+    taxRate,
+    formatAmount,
+    getCheckoutCount,
+    getCheckoutAmount,
+    userAddresses,
+    selectedAddress,
+    selectAddress,
+    placeOrder,
+  } = useAppContext()
+
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const [userAddresses, setUserAddresses] = useState([]);
-
-  const fetchUserAddresses = async () => {
-    setUserAddresses(addressDummyData);
-  }
+  const subTotal = getCheckoutAmount();
+  const taxAmount = Math.floor(subTotal * taxRate * 100) / 100;
+  const totalAmount = Math.floor((subTotal + taxAmount) * 100) / 100;
 
   const handleAddressSelect = (address) => {
-    setSelectedAddress(address);
+    selectAddress(address);
     setIsDropdownOpen(false);
   };
 
   const createOrder = async () => {
+    const result = placeOrder();
 
+    if (!result.success) {
+      toast.error(result.message);
+      return;
+    }
+
+    toast.success("Order placed successfully");
+    router.push('/order-placed');
   }
 
   useEffect(() => {
-    fetchUserAddresses();
-  }, [])
+    if (selectedAddress) return;
+    if (userAddresses.length) {
+      selectAddress(userAddresses[0]);
+    }
+  }, [selectedAddress, selectAddress, userAddresses])
 
   return (
     <div className="w-full md:w-96 bg-gray-500/5 p-5">
@@ -97,8 +116,8 @@ const OrderSummary = () => {
 
         <div className="space-y-4">
           <div className="flex justify-between text-base font-medium">
-            <p className="uppercase text-gray-600">Items {getCartCount()}</p>
-            <p className="text-gray-800">{currency}{getCartAmount()}</p>
+            <p className="uppercase text-gray-600">Items {getCheckoutCount()}</p>
+            <p className="text-gray-800">{formatAmount(subTotal)}</p>
           </div>
           <div className="flex justify-between">
             <p className="text-gray-600">Shipping Fee</p>
@@ -106,16 +125,16 @@ const OrderSummary = () => {
           </div>
           <div className="flex justify-between">
             <p className="text-gray-600">Tax (2%)</p>
-            <p className="font-medium text-gray-800">{currency}{Math.floor(getCartAmount() * 0.02)}</p>
+            <p className="font-medium text-gray-800">{formatAmount(taxAmount)}</p>
           </div>
           <div className="flex justify-between text-lg md:text-xl font-medium border-t pt-3">
             <p>Total</p>
-            <p>{currency}{getCartAmount() + Math.floor(getCartAmount() * 0.02)}</p>
+            <p>{formatAmount(totalAmount)}</p>
           </div>
         </div>
       </div>
 
-      <button onClick={createOrder} className="w-full bg-orange-600 text-white py-3 mt-5 hover:bg-orange-700">
+      <button onClick={createOrder} className="w-full bg-orange-600 text-white py-3 mt-5 hover:bg-orange-700 disabled:opacity-60" disabled={!getCheckoutCount()}>
         Place Order
       </button>
     </div>

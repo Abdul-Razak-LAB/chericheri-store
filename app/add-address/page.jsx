@@ -4,8 +4,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import { useState } from "react";
+import { useAppContext } from "@/context/AppContext";
+import toast from "react-hot-toast";
 
 const AddAddress = () => {
+
+    const { addAddress, router } = useAppContext();
 
     const [address, setAddress] = useState({
         fullName: '',
@@ -18,6 +22,15 @@ const AddAddress = () => {
 
     const onSubmitHandler = async (e) => {
         e.preventDefault();
+
+        if (!address.fullName || !address.phoneNumber || !address.area || !address.city || !address.state) {
+            toast.error("Please fill all required fields.");
+            return;
+        }
+
+        addAddress(address);
+        toast.success("Address saved successfully");
+        router.push('/cart');
 
     }
 
